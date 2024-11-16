@@ -17,9 +17,8 @@ Name: Enforce failed login attempt counter
 Default: yes
 Priority: 0
 Auth-Type: Primary
-Auth:
-    [default=die]   pam_faillock.so authfail
-    sufficient      pam_faillock.so authsucc
+Auth: [default=die]   pam_faillock.so authfail
+Auth: sufficient      pam_faillock.so authsucc
 EOF
 
 echo "Created /usr/share/pam-configs/faillock"
@@ -30,8 +29,7 @@ Name: Notify on failed login attempts
 Default: yes
 Priority: 1024
 Auth-Type: Primary
-Auth:
-    requisite   pam_faillock.so preauth
+Auth: requisite   pam_faillock.so preauth
 EOF
 
 echo "Created /usr/share/pam-configs/faillock_notify"
