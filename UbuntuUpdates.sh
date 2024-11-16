@@ -34,7 +34,7 @@ sudo sed -i '/APT::Periodic::Unattended-Upgrade/c\APT::Periodic::Unattended-Upgr
 
 
 sudo apt-get install unattended-upgrades -yq
-sudo systemctl start unattended-upgrades -yq
+sudo systemctl enable --now unattended-upgrades -yq
 sudo DEBIAN_FRONTEND=noninteractive apt-get update -yq 
 sudo DEBIAN_FRONTEND=noninteractive apt-get upgrade -yq 
 sudo DEBIAN_FRONTEND=noninteractive apt-get dist-upgrade -yq 
