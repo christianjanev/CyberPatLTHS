@@ -36,6 +36,9 @@ EOF
 
 echo "Created /usr/share/pam-configs/faillock_notify"
 
+sudo chmod 644 /usr/share/pam-configs/faillock
+sudo chmod 644 /usr/share/pam-configs/faillock_notify
+
 echo "Updating PAM configuration"
 
 sudo pam-auth-update --package --force
