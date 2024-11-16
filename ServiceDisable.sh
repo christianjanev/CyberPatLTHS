@@ -1,6 +1,6 @@
 #!/bin/bash
 
-services=("ftp" "nginx" "vpn" "snmp" "telnet")
+services=("ftp" "nginx" "vpn" "snmp" "telnet" "apache2")
 
 for (( i=0; i<${#services[@]}; i++ ));
 do
