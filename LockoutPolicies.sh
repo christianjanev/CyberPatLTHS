@@ -14,7 +14,7 @@ sudo touch /usr/share/pam-configs/faillock
 
 cat <<EOF | sudo tee /usr/share/pam-configs/faillock > /dev/null
 Name: Enforce failed login attempt counter
-Default: no
+Default: yes
 Priority: 0
 Auth-Type: Primary
 Auth:
@@ -27,7 +27,7 @@ sudo touch /usr/share/pam-configs/faillock_notify
 
 cat <<EOF | sudo tee /usr/share/pam-configs/faillock_notify > /dev/null
 Name: Notify on failed login attempts
-Default: no
+Default: yes
 Priority: 1024
 Auth-Type: Primary
 Auth:
