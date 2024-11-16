@@ -41,4 +41,9 @@ sudo chmod 644 /usr/share/pam-configs/faillock_notify
 
 echo "Updating PAM configuration"
 
+sudo debconf-set-selections <<EOF
+pam-auth-update shared/pam-configs/faillock boolean true
+pam-auth-update shared/pam-configs/faillock_notify boolean true
+EOF
+
 sudo pam-auth-update --package --force
